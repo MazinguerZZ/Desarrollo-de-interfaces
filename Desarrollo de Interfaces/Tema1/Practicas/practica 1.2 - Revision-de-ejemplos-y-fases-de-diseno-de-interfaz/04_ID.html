@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo con ID en CSS</title>
+  <style>
+    /* Se ha cambiado el color a azul oscuro en lugar de verde */
+    #tituloPrincipal {
+      color: darkblue; 
+      font-size: 32px; /* Tamaño de letra más grande */
+      text-align: center;
+      border-bottom: 3px dashed darkblue; /* Línea inferior punteada en lugar de sólida */
+      padding-bottom: 12px;
+    }
+
+    /* Ahora el fondo es más visible (lightgreen en lugar de lightyellow) */
+    #parrafoDestacado {
+      background-color: lightgreen;
+      font-style: italic;
+      padding: 15px; /* Más espacio interior */
+      border: 2px solid green; /* Borde más grueso y en verde */
+      border-radius: 12px;
+    }
+
+    /* NUEVO: añadimos un estilo para un segundo párrafo con otro ID */
+    #notaFinal {
+      background-color: lightblue;
+      color: darkred;
+      font-weight: bold;
+      padding: 10px;
+      border: 2px dotted darkred; /* borde punteado */
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="tituloPrincipal">Este es el título principal</h1>
+
+  <p id="parrafoDestacado">Este párrafo está destacado con un identificador único.</p>
+
+  <p>Este párrafo no tiene ID, así que no recibe el estilo especial.</p>
+
+  <!-- Nuevo párrafo añadido con otro ID -->
+  <p id="notaFinal">Este es un párrafo adicional con un estilo diferente.</p>
+</body>
+</html>
+

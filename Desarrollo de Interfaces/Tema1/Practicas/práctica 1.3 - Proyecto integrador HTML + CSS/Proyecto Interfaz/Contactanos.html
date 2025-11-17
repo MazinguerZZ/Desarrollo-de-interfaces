@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactanos</title>
+    <link rel="icon" href="../img/coffee-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/contactanos.css">
+    <script defer src="/js/form.js"></script>
+</head>
+
+<body>
+    <nav class="nav-menu">
+        <img id="logo" src="../img/coffee-icon.png" alt="icono de un capuchino fino">
+        <p><a href="index.html">INICIO</a></p>
+        <p><a href="About-US.html">About US</a></p>
+        <p><a href="OurCoffees.html">DISEÑOS</a></p>
+        <p><a href="Contactanos.html">CONTACTENOS</a></p>
+        <button id="btn-user-icon" aria-label="Usuario"></button>
+    </nav>
+
+    <header class="hero">
+        <h1 id="typed"></h1>
+    </header>
+
+    <h2>CONTACTANOS</h2>
+    <form action="../src/index.php" method="get" id="formulario">
+
+        <label for="">NOMBRE</label>
+        <input placeholder="Nombre" id="name" required maxlength="20" type="text">
+
+        <label for="">APELLIDOS</label>
+        <input placeholder="Apellido" id="surname" required maxlength="20" type="text">
+
+        <label for="">CORREO ELECTRONICO</label>
+        <input placeholder="Correo Electronico" id="email" required type="text">
+
+        <label for="">MENSAJE</label>
+        <textarea name="" required id="message"></textarea>
+
+        <button type="submit" id="submit">ENVIAR</button>
+        <button type="reset" id="clear">LIMPIAR</button>
+    </form>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Sobre Nosotros</h3>
+                <p>Creamos espacios únicos que transforman tu vida. Diseño, calidad y confianza en cada proyecto.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#portafolio">Portafolio</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>📧 info@ejemplo.com</p>
+                <p>📱 +34 123 456 789</p>
+                <p>📍 Madrid, España</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="#" title="Facebook">f</a>
+                    <a href="#" title="Instagram">📷</a>
+                    <a href="#" title="Twitter">𝕏</a>
+                    <a href="#" title="LinkedIn">in</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Todos los derechos reservados | Diseñado con pasión</p>
+        </div>
+    </footer>
+</body>
+
+</html>

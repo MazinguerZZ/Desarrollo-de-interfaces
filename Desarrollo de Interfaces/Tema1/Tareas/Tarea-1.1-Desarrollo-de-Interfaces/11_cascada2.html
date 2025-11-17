@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>@scope en CSS</title>
+  <style>
+    /* Estilo general */
+    h2 {
+      color: blue;
+      /* CAMBIO: Añadido margen inferior para mejor espaciado */
+      margin-bottom: 5px;
+    }
+
+    /* Scoped: solo aplica dentro de .articulo */
+    @scope (.articulo) {
+      h2 {
+        color: crimson;
+        /* CAMBIO: Añadido borde izquierdo para visualizar el scope */
+        border-left: 3px solid crimson;
+        /* CAMBIO: Añadido padding para separar el borde del texto */
+        padding-left: 10px;
+      }
+      p {
+        font-style: italic;
+        /* CAMBIO: Añadido fondo para destacar el párrafo dentro del scope */
+        background-color: #f9f9f9;
+        /* CAMBIO: Añadido padding para mejor visualización del fondo */
+        padding: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>Este h2 es azul (regla global)</h2>
+
+  <section class="articulo">
+    <h2>Este h2 es rojo (scope)</h2>
+    <p>Párrafo en cursiva solo dentro del scope.</p>
+  </section>
+
+  <h2>Este h2 vuelve a ser azul</h2>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<style>
+    	/* Antes: color: chartreuse -> Ahora: color: fuchsia */
+    	[selected] {color: fuchsia;}
+
+    	/* Antes: fondo lightslategray -> Ahora: fondo darkorange */
+    	[disabled] {background-color: darkorange;}
+
+    	/* Antes: font-family: cursive -> Ahora: monospace para contraste fuerte */
+    	[name="provincia"] {font-family: monospace;}
+
+    	/* Antes: borde 2px rojo -> Ahora: borde discontinuo violeta */
+    	[placeholder~="su"] {border: 2px dashed violet;}
+
+    	/* Antes: font-style oblique -> Ahora: small-caps con transformación de texto */
+    	[name|="opt"] {font-variant: small-caps;}
+
+    	/* Antes: font-weight bolder -> Ahora: font-weight lighter (inverso) */
+    	[name^="opt"] {font-weight: lighter;}
+
+    	/* Antes: fondo gainsboro -> Ahora: fondo lemonchiffon */
+    	[name$="ado"] {background-color: lemonchiffon;}   
+
+    	/* Antes: fondo antiquewhite + margin 3px -> Ahora: fondo aqua + margin 15px */
+    	[type*="ex"] {background-color: aqua; margin: 15px;}
+    	</style>
+	</head>
+	<body>
+    		<form action="#" method="get">
+        		<fieldset>
+            	<legend>Dirección:</legend>
+            	<label for="nombre">Introduzca su nombre:</label>
+            	<input type="text" name="nombre" placeholder="Aquí su nombre..."/>
+            	<br/>
+            	<label for="apellido">Introduzca su apellido:</label>
+            	<input type="text" name="apellido" placeholder="Aquí su apellido..."/>
+            	<br/>
+            	<label for="pais">País:</label>
+            	<select name="pais" id="pais">
+                	<option value="ES" name="opt-pais1" selected>España</option>
+                	<option value="PT" name="opt-pais2">Portugal</option>
+                	<option value="AN" name="opt-pais3">Andorra</option>
+                	<option value="FR" name="opt-pais4">Francia</option>
+                	<option value="AT" name="opt-pais5" disabled>Atlantida</option>
+            	</select>
+                <label for="provincia">Provincia:</label>
+            	<select name="provincia" id="provincia">
+                	<option value="MAD" name="optProv1" selected>Madrid</option>
+                	<option value="BCN" name="optProv2">Barcelona</option>
+                	<option value="VAL" name="optProv3">Valencia</option>
+                	<option value="SEV" name="optProv4">Sevilla</option>
+            	</select>
+            	<br/>
+            	<input type="button" name="btnDeshabilitado" value="En construcción" disabled>
+            	<br/>
+            	<input type="reset" value="Limpiar" name="btn-limpiar"/>
+            	<br/>
+            	<input type="submit" value="Enviar" name="btn-enviar"/>
+        		</fieldset>
+    		</form>       	 
+	</body>
+</html>
