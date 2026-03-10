@@ -1,0 +1,151 @@
+<!-- Date 24/10/2025 Añadimos el index.html con style.css -->
+<!-- Date 25/10/2025 -->
+<!-- Date 26/10/2025 -->
+<!-- Date 27/10/2025 -->
+<!-- Date 28/10/2025 Añadimos los css y html restantes about-us html y css -->
+
+<!DOCTYPE html> 
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffe Express</title>
+    <link rel="icon" href="../img/coffee-icon.png" type="image/x-icon">
+    <!-- Ahora enlazamos las paginas web de nuestra pagina main para que se comuniquen -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Libreria de prueba para ver diseños dinamicos -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="About-US.html">
+    <link rel="stylesheet" href="OurCoffees.html">
+    <link rel="stylesheet" href="Contactanos.html">
+    <!-- Importamos el script y con el atributo defer nos permite al js esperar a que cargue la pagina web para ser ejecutado-->
+    <script defer src="/js/index.js"></script>
+    <!-- Importamos las fuentes que vamos a usar que estan sacadas de la pagina odoo ya que nos gustaron  -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="terminosYcondiciones.html">
+</head>
+
+<body>
+
+    <!-- Menu de navegacion --->
+
+    <nav class="nav-menu">
+        <img class="animate__animated animate__bounceInLeft animate__bounce animate__delay-2s" id="logo" src="../img/coffee-icon.png" alt="icono de un capuchino fino">
+        <p class="animate__swing"><a href="#INICIO">INICIO</a></p>
+        <p><a class="animate__animated animate__swing animate__delay-2s" href="About-US.html">About US</a></p>
+        <p><a href="OurCoffees.html">DISEÑOS</a></p>
+        <p><a href="Contactanos.html">CONTACTENOS</a></p>
+    </nav>
+
+    <!-- Nuestro header y la portada de la web --->
+
+    <header class="hero">
+        <h1 id="typed"></h1>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#3E2723" fill-opacity="1"
+                d="M0,0L26.7,32C53.3,64,107,128,160,160C213.3,192,267,192,320,208C373.3,224,427,256,480,229.3C533.3,203,587,117,640,106.7C693.3,96,747,160,800,165.3C853.3,171,907,117,960,117.3C1013.3,117,1067,171,1120,170.7C1173.3,171,1227,117,1280,85.3C1333.3,53,1387,43,1413,37.3L1440,32L1440,320L0,320Z">
+            </path>
+        </svg>
+    </header>
+
+    <!-- Carrusel de imagenes que esta para que se puedan ir cambiando -->
+
+    <main class="scroll-images">
+        <button id="left-arrow" aria-label="Anterior">‹</button>
+        <img src="" id="carrusel" alt="Imagen del carrusel">
+        <button id="right-arrow" aria-label="Siguiente">›</button>
+    </main>
+
+    <!-- Añadimos un estilo de ola en forma de bandera, generado con la pagina smooth.ie/svg --->
+    <section class="target-flag">
+        <div class="svg-container">
+            <div> 
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+                    <path d="M0.85,-0.47 C141.92,180.11 141.92,-20.20 -0.84,151.48 L500.00,150.00 L500.00,0.00 Z"
+                        style="stroke: none; fill: #3E2723F2;"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div class="content-into-flag">
+            <!-- Aqui para complementar con el trabajo usamos un framework llamado animations.css que nos permite
+            añadir animaciones ya hechas usando class="------" -->
+            <h2 class="animate__animated animate__bounceInLeft animate__bounce animate__delay-4s">¿Qué hacemos?</h2>
+            <p>Nos dedicamos a dar cafes de alta calidad mostrando que somos los mejores en este sector nos
+                distribuyimos por todo Madrid</p>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <h2 id="review-title">RESEÑAS</h2>
+        <div class="container-reviews">
+            <div class="animate__backInLeft">
+                <div class="card-1">
+                    <img id="contact-1" src="../img/persons/3541ea71d49833e5d8f5cb9647348342.jpg" alt="">
+                    <h2>Rodolfo Gonzalez</h2>
+                    <p>Me gustan que los cafes tengan una variedad de sabores y de delicadezas en los detalles que se
+                        dan en la cafeteria</p>
+                </div>
+            </div>
+            <div class="card-2">
+                <img id="contact-2" src="../img/persons/cabinet-etude-marche-enquete-marketing-sondage-opinions-1.jpg" alt="">
+                <h2>Carlos Mendoza</h2>
+                <p>Disfruto de los cafés que cuentan una historia a través de sus aromas y la calidez de su servicio excepcional</p>
+            </div>
+            <div class="animate__backInRight">
+                <div class="card-3">
+
+                    <img id="contact-3" src="../img/persons/OIP2.jpg" alt="">
+                    <h2>Andrea Silva</h2>
+                    <p>Me encanta descubrir cafés con personalidad única y atención meticulosa en cada detalle de la experiencia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Sobre Nosotros</h3>
+                <p>Creamos espacios únicos que transforman tu vida. Diseño, calidad y confianza en cada proyecto.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#portafolio">Portafolio</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>📧 info@ejemplo.com</p>
+                <p>📱 +34 123 456 789</p>
+                <p>📍 Madrid, España</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="#" title="Facebook">f</a>
+                    <a href="#" title="Instagram">📷</a>
+                    <a href="#" title="Twitter">𝕏</a>
+                    <a href="#" title="LinkedIn">in</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Todos los derechos reservados | Diseñado con pasión</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+    	/* Antes: content '\23F4' -> Ahora: '\2603' (muñeco de nieve), color cambiado */
+    	p::after {
+        		content: '\2603'!important; /* Unicode snowman */
+        		color: teal!important; /* Antes #e03574 */
+        		font-size: 2em; /* Antes 1.5em -> más grande */
+    	}
+
+    	/* Antes: content '\1F6C8' -> Ahora: '\2728' (brillo ✨) */
+    	p::before {
+        		content: '\2728'!important;
+    	}
+
+    	/* Antes: font-size 200%, color #8A2BE2 -> Ahora: 300%, color darkred */
+    	p::first-letter {
+        		font-size: 300%;
+        		color: darkred;
+    	}
+
+    	/* Antes: font-family sans-serif -> Ahora: monospace para contraste fuerte */
+    	p::first-line {
+        		font-family: monospace;
+    	}
+
+    	/* Antes: marker '\23F5' -> Ahora: '\25A0' (cuadrado negro), color cambiado */
+    	li::marker {
+        		content: '\25A0'!important;
+        		color: darkgreen!important;
+    	}
+
+    	/* Antes: selección rojo/amarillo -> Ahora: azul sobre gris */
+    	li::selection {
+        		color: blue;
+        		background: lightgray;
+    	}
+	</style>
+</head>
+<body>
+   <p>Este primer párrafo es bastante importante. Y lo voy a hacer lo más largo posible ya que quiero que se remarque su primera línea. Y si no muestra varias líneas pues no lo vamos a notar.</p>
+   <ul>
+    	<li>Primer Elemento</li>
+    	<li>Segundo Elemento</li>
+    	<li>Tercer Elemento</li>
+   </ul>
+</body>
+</html>
+
