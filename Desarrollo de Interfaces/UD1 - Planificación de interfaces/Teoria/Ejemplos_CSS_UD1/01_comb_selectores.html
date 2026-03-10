@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  	<style>
+/*He cambiado p span por span b*/
+span b {
+	   background-color: aqua;
+}
+/*He cambiado span por p*/
+div > p {
+	background-color: bisque;
+}
+/*He cambiado span + b por b + strong*/
+b + strong {
+      	   margin: 6px;
+  	   background-color: burlywood;
+ 	}
+/*He cambiado p~div por p~span*/	
+p ~ span {
+      	   border: 1px solid cadetblue;
+ 	}
+ 	</style>
+    </head>
+    <body>  
+	<div>
+    	   <p>Primer párrafo.</p> <p><span>Primera palabra</span> del segundo párrafo.</p>
+    	   <div>
+               <p>
+            	<span>Primera palabra</span>
+            	<b>remarcada</b> <strong>e importante</strong> 
+				dentro de un párrafo más interior</p>
+        	    <span>Sólo es una frase <b>suelta</b>.</span>
+    	   </div>
+	</div>		 
+    </body>
+</html

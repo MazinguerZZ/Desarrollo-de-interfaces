@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2</title>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  color: blueviolet;
+  border: 1px dashed gray;
+  /* CAMBIO: Añadido padding para mejor espaciado */
+  padding: 10px;
+}
+.caja {
+  width: 200px;
+  height: 100px;
+  border: unset;
+  /* CAMBIO: Añadido borde rojo para ver qué pasa con unset */
+  border: 1px solid red;
+  padding: 20px;
+  margin: 20px;
+  /* CAMBIO: Añadido fondo para visualizar mejor la caja */
+  background-color: #f5f5f5;
+}
+p {
+  color: inherit;
+  /* CAMBIO: Añadido margen para mejor espaciado */
+  margin: 5px 0;
+}
+section { 
+    color: inherit; 
+    border: inherit;
+    /* CAMBIO: Añadido margen y padding para sección */
+    margin: 10px 0;
+    padding: 10px;
+}
+article {
+    border: inherit; 
+    color: initial;
+    /* CAMBIO: Añadido margen y padding para artículos */
+    margin: 5px 0;
+    padding: 5px;
+}
+span {
+  color: inherit;
+  /* CAMBIO: Añadido fondo amarillo para destacar el span */
+  background-color: yellow;
+}
+  </style>
+</head>
+<body>
+    <h2>Noticias</h2>
+    <section>
+     <article class="caja">
+      <p>Este es el contenido de la noticia 1.</p>
+    </article>
+    <article>
+      <p>Este es <span>el contenido de </span> la noticia 2.</p>
+    </article>
+  </section>
+</body>
+</html>

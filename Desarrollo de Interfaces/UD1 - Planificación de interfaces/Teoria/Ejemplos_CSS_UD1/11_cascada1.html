@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>@layer en CSS</title>
+  <style>
+    /* Definimos capas */
+    @layer reset, base, theme;
+
+    /* Ordenamos las capas */
+    @layer reset {
+      button {
+        all: unset;
+        background: none;
+        color: black;
+        /* CAMBIO: Añadido display block y margen para mejor visualización */
+        display: block;
+        margin: 10px 0;
+      }
+    }
+
+    @layer base {
+      button {
+        padding: 10px 20px;
+        border: 1px solid gray;
+        background: lightgray;
+        color: black;
+      }
+    }
+
+    @layer theme {
+      button {
+        background: indigo;
+        color: white;
+        border-radius: 8px;
+        /* CAMBIO: Añadida sombra para mejor efecto visual */
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>Ejemplo con @layer</h2>
+  <button>Botón con capas</button>
+  <!-- CAMBIO: Añadido segundo botón con estilo inline para comparar -->
+  <button style="background: red">Botón con estilo inline</button>
+</body>
+</html>

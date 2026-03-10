@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de Clases en HTML</title>
+  <style>
+body{
+    background-color: rgb(82, 49, 143);
+}
+.red{
+color: red;
+}
+
+/*He añadido un subrayado*/
+.bold{
+font-weight: bold;
+  text-decoration: underline;
+}
+
+/*He añadido esta clase nueva en el primer parrafo*/
+.tamaño{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+  </style>
+</head>
+<body>
+  <h2 class="red bold">
+    Este título combina los estilos aplicados de la clase "red"
+    y "bold".
+  </h2>
+  <p class="tamaño">A este párrafo no se le ha aplicado ninguna clase.</p> <!-- He añadifo la clase tamañó -->
+  <p class="red">Pero a este sí</p>
+  <div class="bold tamaño">Y a este div también</div>  <!-- He añadido la clase tamaño mas la clase bold -->
+</body>
+</html>
