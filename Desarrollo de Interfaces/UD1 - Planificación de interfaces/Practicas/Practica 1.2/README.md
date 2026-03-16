@@ -1,7 +1,6 @@
 # Práctica 1.2 — Revisión de ejemplos y fases de diseño de interfaz
 
 **Módulo:** 2º DAM — Diseño de Interfaces · UD1 Planificación de interfaces  
-**Apertura:** lunes, 22 de septiembre de 2025 · **Cierre:** viernes, 3 de octubre de 2025 a las 14:30
 
 > ⚠️ Todas las entregas deben incluir tu **nombre y apellidos o siglas**.
 
