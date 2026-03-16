@@ -1,7 +1,6 @@
 # Tarea 3.5 — Uso de Props
 
 **Módulo:** 2º DAM — Diseño de Interfaces · UD3 DOM Declarativo y React  
-**Apertura:** lunes, 2 de febrero de 2026 · **Cierre:** lunes, 9 de febrero de 2026 a las 09:05
 
 ---
 
