@@ -13,7 +13,7 @@
 
 ## Objetivo
 
-Migrar la app [`Formacion_Seleccion.html`](Formacion_Seleccion.html) — desarrollada con HTML + CSS + JS — a **React (JSX)** usando:
+Migrar la app [`Formacion_Seleccion.html`](https://github.com/MazinguerZZ/Desarrollo-de-interfaces/blob/main/Desarrollo%20de%20Interfaces/UD3%20-%20DOM%20Declarativo%20y%20REACT/Practicas/Practica%203.2/codigo%20base/Formacion_seleccion.html) — desarrollada con HTML + CSS + JS — a **React (JSX)** usando:
 
 - Componentes
 - `props` para pasar datos
