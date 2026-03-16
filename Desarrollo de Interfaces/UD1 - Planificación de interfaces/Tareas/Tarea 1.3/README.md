@@ -1,7 +1,6 @@
 # Tarea 1.3 — Dashboard: Panel de Control con Grid
 
 **Módulo:** 2º DAM — Diseño de Interfaces · UD1 Planificación de interfaces  
-**Apertura:** viernes, 10 de octubre de 2025 · **Cierre:** miércoles, 15 de octubre de 2025 a las 23:59
 
 ---
 
