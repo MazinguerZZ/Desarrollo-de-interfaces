@@ -1,7 +1,6 @@
 # Tarea Cierre DDINT
 
 **Módulo:** 2º DAM — Diseño de Interfaces  
-**Apertura:** lunes, 9 de febrero de 2026 · **Cierre:** lunes, 9 de febrero de 2026 a las 10:15
 
 ---
 
