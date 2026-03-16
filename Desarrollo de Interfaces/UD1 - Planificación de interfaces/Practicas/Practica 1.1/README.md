@@ -1,7 +1,6 @@
 # Práctica 1.1 — Miniactividades del recurso visto en clase
 
 **Módulo:** 2º DAM — Diseño de Interfaces · UD1 Planificación de interfaces  
-**Apertura:** viernes, 19 de septiembre de 2025 · **Cierre:** lunes, 22 de septiembre de 2025 a las 23:59
 
 ---
 
