@@ -1,7 +1,6 @@
 # Práctica 3.3 — Diagrama de flujo de datos
 
 **Módulo:** 2º DAM — Diseño de Interfaces · UD3 DOM Declarativo y React  
-**Apertura:** viernes, 6 de febrero de 2026 · **Cierre:** viernes, 6 de febrero de 2026 a las 10:15
 
 ---
 
