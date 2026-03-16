@@ -1,7 +1,6 @@
 # Tarea 2.2 — Prototype en JavaScript
 
 **Módulo:** 2º DAM — Diseño de Interfaces  
-**Apertura:** viernes, 28 de noviembre de 2025 · **Cierre:** domingo, 30 de noviembre de 2025 a las 22:00
 
 ---
 
