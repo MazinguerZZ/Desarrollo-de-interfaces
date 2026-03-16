@@ -1,7 +1,6 @@
 # Tarea 2.6 — Función validar nombre
 
 **Módulo:** 2º DAM — Diseño de Interfaces  
-**Apertura:** lunes, 15 de diciembre de 2025 · **Cierre:** viernes, 19 de diciembre de 2025 a las 13:45
 
 ---
 
