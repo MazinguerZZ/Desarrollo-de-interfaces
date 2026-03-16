@@ -1,8 +1,5 @@
 # Tarea 0.1 — Refrescando CSS
 
-**Módulo:** 2º DAM — Diseño de Interfaces · UD1 Planificación de interfaces  
-**Apertura:** lunes, 15 de septiembre de 2025 · **Cierre:** miércoles, 17 de septiembre de 2025 a las 14:20
-
 ---
 
 ## Entrega
