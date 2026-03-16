@@ -15,7 +15,7 @@ Incluye en el PDF el script completo y una captura de pantalla de la validación
 
 ## Punto de partida
 
-Archivos `html_form_preview.html` y `css_form_preview.css` de la carpeta Formulario (Ejemplo).
+Archivos [html_form_preview.html](https://github.com/MazinguerZZ/Desarrollo-de-interfaces/blob/main/Desarrollo%20de%20Interfaces/UD2%20-%20Manipulaci%C3%B3n%20e%20Interactividad%20de%20interfaces/Tareas/Tarea%202.6/Ejemplo%20Formulario/html_form_preview.html) y [css_form_preview.css](https://github.com/MazinguerZZ/Desarrollo-de-interfaces/blob/main/Desarrollo%20de%20Interfaces/UD2%20-%20Manipulaci%C3%B3n%20e%20Interactividad%20de%20interfaces/Tareas/Tarea%202.6/Ejemplo%20Formulario/css_form_preview.css) de la carpeta Formulario (Ejemplo).
 
 ---
 
