@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>España XI Titular</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 20px; }
+      .caja { border: 1px solid #ccc; padding: 15px; border-radius: 8px; max-width: 850px; }
+      select, button { padding: 8px; margin-right: 6px; }
+      .fila { margin-bottom: 12px; }
+      li { margin: 6px 0; }
+      .pos { font-size: 12px; border: 1px solid #aaa; padding: 2px 6px; border-radius: 10px; margin-left: 6px; }
+      .ok { color: green; font-weight: bold; }
+      .bad { color: darkred; font-weight: bold; }
+      #msg { margin-top: 8px; min-height: 20px; }
+    </style>
+  </head>
+  
+  <body>
+    <div class="caja">
+      <h1>España XI Titular</h1>
+      <p>
+        Reglas: 11 jugadores exactos.<br>
+        Mínimos por línea: 1 PORTERO, 2 DEFENSAS, 2 MEDIOS, 1 DELANTERO.<br>
+        Máximos por línea: 1 PORTERO, 5 DEFENSAS, 5 MEDIOS, 4 DELANTEROS.<br>
+        No repetir jugador.
+      </p>
+
+      <div class="fila">
+        <label>Posición:</label>
+        <!-- Menú para elegir posición. -->
+        <select id="pos">
+          <option value="POR">PORTERO</option>
+          <option value="DEF">DEFENSA</option>
+          <option value="MC">MEDIO CAMPISTA</option>
+          <option value="DEL">DELANTERO</option>
+        </select>
+
+        <label>Jugador:</label>
+        <!-- Lista donde aparecen los jugadores seleccionables por posición -->
+        <select id="jug"></select>
+
+        <button id="add">Añadir</button>
+        <button id="ordenar">Ordenar</button>
+        <button id="reset">Reset</button>
+      </div>
+
+      <h3>Convocados</h3>
+        //Lista de la formación titular
+      <ul id="lista"></ul>
+
+      <h3>Resumen</h3>
+        <!--Esta sección permite comprobar que la selección es válida y cumple las reglas -->
+      <div id="resumen"></div>
+      <div id="msg"></div>
+      <button id="confirmar" disabled>Confirmar</button>
+    </div>
+
+    <script>
+      // Creamos el objeto "jugadoresPorpos" con arrays de jugadores por posición
+      const jugadoresPorPos = {
+        POR: ["Álex Remiro", "David Raya", "Joan García"],
+        DEF: ["Cubarsí", "Laporte", "Le Normand", "Huijsen", "Cucurella", "Pedro Porro", "Mar Pubill", "Grimaldo"],
+        MC: ["Rodri", "Pedri", "Álex Baena", "Edu Expósito","Fabián", "Oihan Sancet", "Zubimendi", "Olmo"],
+        DEL: ["Mikel Oyarzabal", "Nico Williams", "Lamine Yamal", "Ferran", "Roberto Fernández", "Víctor Muñoz"]
+      };
+
+      const max = { POR: 1, DEF: 5, MC: 5, DEL: 4 };
+      const min = { POR: 1, DEF: 2, MC: 2, DEL: 1 };
+
+      // Estado 
+      let posSeleccionada = "POR";
+      let jugadorSeleccionado = jugadoresPorPos.POR[0];
+      let equipo = []; // [{nombre, pos}]
+
+      // Guardamos los siguientes Elementos HTML para su posterior manipulación
+      const posSel = document.getElementById("pos");
+      const jugSel = document.getElementById("jug");
+      const lista = document.getElementById("lista");
+      const resumen = document.getElementById("resumen");
+      const msg = document.getElementById("msg");
+      const btnConfirmar = document.getElementById("confirmar");
+
+      // Funcion para contar los jugadores por posición
+      function contar(pos) {
+        return equipo.filter(j => j.pos === pos).length;
+      }
+      
+      // Funciones de verificación de reglas
+
+      function cumpleMinimos() {
+        return (
+          contar("POR") >= min.POR &&
+          contar("DEF") >= min.DEF &&
+          contar("MC") >= min.MC &&
+          contar("DEL") >= min.DEL
+        );
+      }
+
+      function equipoValido() {
+        return equipo.length === 11 && cumpleMinimos();
+      }
+
+      // mENSAJES EN rojo o verde
+
+      function setMensaje(texto, esOk) {
+        msg.textContent = texto;
+        msg.className = esOk ? "ok" : "bad";
+        if (texto === "") msg.className = "";
+      }
+
+      function pintarJugadores() {
+        // Rellena el select del jugador con los jugadores de la posición actual
+        jugSel.innerHTML = "";
+        jugadoresPorPos[posSeleccionada].forEach(nombre => {
+          const option = document.createElement("option");
+          option.value = nombre;
+          option.textContent = nombre;
+          jugSel.appendChild(option);
+        });
+        jugadorSeleccionado = jugSel.value;
+      }
+      
+      /* La función render() Redibuja la interfaz. 
+        1) Vacía lista; 
+        2) Añade jugadores del equipo.
+        3) Crea botón borrar. 
+        4) Muestra el resumen. 
+        5) Activa/desactiva botón confirmar.
+        */
+      function render() {
+        // Pintar lista
+        lista.innerHTML = "";
+
+        equipo.forEach((j, i) => {
+          const li = document.createElement("li");
+          li.innerHTML = `${j.nombre} <span class="pos">${j.pos}</span>`;
+
+          const btn = document.createElement("button");
+          btn.textContent = "Borrar";
+          btn.addEventListener("click", () => {
+            equipo = equipo.filter((_, idx) => idx !== i);
+            setMensaje("", true);
+            render();
+          });
+
+          li.appendChild(document.createTextNode(" "));
+          li.appendChild(btn);
+          lista.appendChild(li);
+        });
+
+        // resumen
+        const nPOR = contar("POR");
+        const nDEF = contar("DEF");
+        const nMC = contar("MC");
+        const nDEL = contar("DEL");
+
+        resumen.innerHTML = `
+          <p>Jugadores: <b>${equipo.length}</b> / 11</p>
+          <p>POR: ${nPOR} | DEF: ${nDEF} | MC: ${nMC} | DEL: ${nDEL}</p>
+          <p>Mínimos: ${cumpleMinimos() ? '<span class="ok">OK</span>' : '<span class="bad">NO</span>'}</p>
+          <p>Equipo válido: ${equipoValido() ? '<span class="ok">SÍ</span>' : '<span class="bad">NO</span>'}</p>
+        `;
+
+        btnConfirmar.disabled = !equipoValido();
+      }
+
+      function añadirJugador() {
+        setMensaje("", true);
+
+        // Validación No más de 11
+        if (equipo.length >= 11) return setMensaje("No puedes pasar de 11 jugadores.", false);
+
+        // Validación No repetir
+        const repetido = equipo.some(j => j.nombre === jugadorSeleccionado);
+        if (repetido) return setMensaje("Ese jugador ya está en el equipo.", false);
+
+        // Validación Máximo por posición
+        if (contar(posSeleccionada) >= max[posSeleccionada]) {
+          return setMensaje("Máximo en esa posición.", false);
+        }
+
+        // Validación Añadir
+        equipo.push({ nombre: jugadorSeleccionado, pos: posSeleccionada });
+        render();
+      }
+      // Función que ordena por posición y luego por nombre alfabético.
+      function ordenarEquipo() {
+        const ordenPos = { POR: 0, DEF: 1, MC: 2, DEL: 3 };
+
+        equipo.sort((a, b) => {
+          if (ordenPos[a.pos] !== ordenPos[b.pos]) {
+            return ordenPos[a.pos] - ordenPos[b.pos];
+          }
+          return a.nombre.localeCompare(b.nombre);
+        });
+
+        render();
+      }
+
+      function reset() {
+        equipo = [];
+        setMensaje("", true);
+        render();
+      }
+
+      // Eventos
+      posSel.addEventListener("change", (e) => {
+        posSeleccionada = e.target.value;
+        pintarJugadores();
+        setMensaje("", true);
+      });
+
+      jugSel.addEventListener("change", (e) => {
+        jugadorSeleccionado = e.target.value;
+      });
+
+      document.getElementById("add").addEventListener("click", añadirJugador);
+      document.getElementById("ordenar").addEventListener("click", ordenarEquipo);
+      document.getElementById("reset").addEventListener("click", reset);
+
+      btnConfirmar.addEventListener("click", () => {
+        if (!equipoValido()) return setMensaje("No se cumplen todas las reglas.", false);
+        setMensaje("Alineación confirmada", true);
+      });
+
+      // Inicio 
+      pintarJugadores();
+      render();
+    </script>
+  </body>
+</html>
