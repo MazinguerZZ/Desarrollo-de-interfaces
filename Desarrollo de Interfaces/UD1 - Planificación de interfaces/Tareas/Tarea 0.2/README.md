@@ -1,4 +1,4 @@
-# Tarea 0.2 — Tarjeta de producto con CSS
+# Tarea 0.2 — Reto: averigua el CSS
 
 **Módulo:** 2º DAM — Diseño de Interfaces · UD1 Planificación de interfaces
 
