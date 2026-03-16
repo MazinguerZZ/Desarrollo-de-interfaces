@@ -1,7 +1,6 @@
 # Práctica 2.4 — Formulario con validaciones
 
 **Módulo:** 2º DAM — Diseño de Interfaces  
-**Apertura:** jueves, 18 de diciembre de 2025 · **Cierre:** miércoles, 7 de enero de 2026 a las 23:59
 
 ---
 
