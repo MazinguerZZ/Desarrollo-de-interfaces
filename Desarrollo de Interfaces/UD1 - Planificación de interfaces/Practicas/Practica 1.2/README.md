@@ -2,8 +2,6 @@
 
 **Módulo:** 2º DAM — Diseño de Interfaces · UD1 Planificación de interfaces  
 
-> ⚠️ Todas las entregas deben incluir tu **nombre y apellidos o siglas**.
-
 ---
 
 ## Parte 1 — Modificación de ejemplos HTML + CSS
