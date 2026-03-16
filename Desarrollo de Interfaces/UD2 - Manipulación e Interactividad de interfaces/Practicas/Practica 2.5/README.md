@@ -1,9 +1,6 @@
 # Práctica 2.5 — Proyecto de mini-app Web
 
 **Módulo:** 2º DAM — Diseño de Interfaces  
-**Apertura:** viernes, 9 de enero de 2026 · **Cierre:** viernes, 16 de enero de 2026 a las 22:15
-
-> ⚠️ Esta actividad **pondera doble** como práctica y **computa como examen**.
 
 ---
 
